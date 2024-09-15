@@ -89,6 +89,10 @@ def try_catch_retry(retries: int = 1, delay: float = 1, rethrow: bool = False) -
 # def test() -> None:
 #     raise Exception("Hello World")
 #
+# @try_catch_retry(4,2,False)
+# def your_func_code() -> None:
+#   print(int("Hello World"))
+#
 # @try_catch_retry(retry_num, retry_delay,False)
 # def connect() -> None:
 #     # pretend that this contains an actual sql connection
@@ -104,11 +108,12 @@ def try_catch_retry(retries: int = 1, delay: float = 1, rethrow: bool = False) -
 #
 #
 # def main() -> None:
-#     print(f'Retries = {str(retry_num)}')
-#     print(f'Delay = {str(retry_delay)}')
-#     connect()
-#     connect_again()
-#     test() # decorator is set to true (see above) - this will deliberately rethrow the error to force a script exit
+#     #print(f'Retries = {str(retry_num)}')
+#     #print(f'Delay = {str(retry_delay)}')
+#     #connect()
+#     #connect_again()
+#     #test() # decorator is set to true (see above) - this will deliberately rethrow the error to force a script exit
+#     your_func_code()
 #
 #
 # if __name__ == '__main__':

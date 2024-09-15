@@ -20,9 +20,7 @@ with open(file_path, 'r') as f:
 """
 logging config information:
 
-https://docs.python.org/3/library/logging.config.html#configuration-dictionary-schema
-https://stackoverflow.com/questions/7507825/where-is-a-complete-example-of-logging-config-dictconfig
-https://realpython.com/python-logging/
+
 
 """
 
@@ -52,7 +50,7 @@ def log(log_type: str = "info",log_message: str = "") -> None:
 
 
 
-# # =======================TEST=======================
+# # # =======================TEST=======================
 # def main() -> None:
 #     log("info","Hello World")
 #     log("warning","Hello World")

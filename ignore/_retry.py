@@ -68,5 +68,9 @@ def retry(retries: int = retry_num, delay: float = retry_delay) -> Callable:
 #     connect_again()
 #
 #
-# if __name__ == '__main__':
-#     main()
+@retry(4, 2)
+def your_func_code() -> None:
+    print("Hello World")
+
+if __name__ == '__main__':
+     your_func_code()
