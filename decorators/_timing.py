@@ -49,7 +49,7 @@ def get_time(func: Callable) -> Callable:
     return wrapper
 
 
-# =======================TEST=======================
+# #=======================TEST=======================
 # @get_time
 # def connect() -> None:
 #     print('Connecting...')
