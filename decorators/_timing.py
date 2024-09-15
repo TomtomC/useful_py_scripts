@@ -50,27 +50,27 @@ def get_time(func: Callable) -> Callable:
 
 
 # =======================TEST=======================
-@get_time
-def connect() -> None:
-    print('Connecting...')
-    sleep(1) # brrr, pretend sql stuff
-    print('Connected!')
-
-@get_time
-def a_lotta_loops() -> None:
-    many_loops: int = int(47483647)
-
-    print('Looping...')
-    for n in range(many_loops):
-        pass
-
-    print('Done looping!')
-
-
-def main() -> None:
-    a_lotta_loops()
-    connect()
-
-
-if __name__ == '__main__':
-    main()
+# @get_time
+# def connect() -> None:
+#     print('Connecting...')
+#     sleep(1) # brrr, pretend sql stuff
+#     print('Connected!')
+#
+# @get_time
+# def a_lotta_loops() -> None:
+#     many_loops: int = int(47483647)
+#
+#     print('Looping...')
+#     for n in range(many_loops):
+#         pass
+#
+#     print('Done looping!')
+#
+#
+# def main() -> None:
+#     a_lotta_loops()
+#     connect()
+#
+#
+# if __name__ == '__main__':
+#     main()

@@ -80,36 +80,36 @@ def try_catch_retry(retries: int = 1, delay: float = 1, rethrow: bool = False) -
 
     return decorator
 
-# =======================TEST=======================
-
-retry_num: int = 3
-retry_delay: float = 1
-
-@try_catch(True)
-def test() -> None:
-    raise Exception("Hello World")
-
-@try_catch_retry(retry_num, retry_delay,False)
-def connect() -> None:
-    # pretend that this contains an actual sql connection
-    time.sleep(1)
-    raise Exception('Could not connect to internet...')
-
-# testing without in_argument variables assigned
-@try_catch_retry()
-def connect_again() -> None:
-    # pretend that this contains an actual sql connection
-    time.sleep(1)
-    raise Exception('Could not connect to internet...')
-
-
-def main() -> None:
-    print(f'Retries = {str(retry_num)}')
-    print(f'Delay = {str(retry_delay)}')
-    connect()
-    connect_again()
-    test() # decorator is set to true (see above) - this will deliberately rethrow the error to force a script exit
-
-
-if __name__ == '__main__':
-    main()
+# # =======================TEST=======================
+#
+# retry_num: int = 3
+# retry_delay: float = 1
+#
+# @try_catch(True)
+# def test() -> None:
+#     raise Exception("Hello World")
+#
+# @try_catch_retry(retry_num, retry_delay,False)
+# def connect() -> None:
+#     # pretend that this contains an actual sql connection
+#     time.sleep(1)
+#     raise Exception('Could not connect to internet...')
+#
+# # testing without in_argument variables assigned
+# @try_catch_retry()
+# def connect_again() -> None:
+#     # pretend that this contains an actual sql connection
+#     time.sleep(1)
+#     raise Exception('Could not connect to internet...')
+#
+#
+# def main() -> None:
+#     print(f'Retries = {str(retry_num)}')
+#     print(f'Delay = {str(retry_delay)}')
+#     connect()
+#     connect_again()
+#     test() # decorator is set to true (see above) - this will deliberately rethrow the error to force a script exit
+#
+#
+# if __name__ == '__main__':
+#     main()

@@ -3,6 +3,8 @@ from decorators._trycatch import try_catch, try_catch_retry
 from modules._logs import log
 from time import sleep
 
+#### AN EXAMPLE SCRIPT TO SHOWCASE THE DECORATORS AND MODULES ###
+
 
 @get_time
 @try_catch(False)

@@ -52,13 +52,13 @@ def log(log_type: str = "info",log_message: str = "") -> None:
 
 
 
-# =======================TEST=======================
-def main() -> None:
-    log("info","Hello World")
-    log("warning","Hello World")
-    log("error","Hello World")
-    log("critical","Hello World")
-    log("debug","Hello World")
-
-if __name__ == '__main__':
-    main()
+# # =======================TEST=======================
+# def main() -> None:
+#     log("info","Hello World")
+#     log("warning","Hello World")
+#     log("error","Hello World")
+#     log("critical","Hello World")
+#     log("debug","Hello World")
+#
+# if __name__ == '__main__':
+#     main()
