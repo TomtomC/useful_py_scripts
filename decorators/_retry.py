@@ -46,27 +46,27 @@ def retry(retries: int = retry_num, delay: float = retry_delay) -> Callable:
 
     return decorator
 
-# =======================TEST=======================
-@retry(retry_num, retry_delay)
-def connect() -> None:
-    # pretend that this contains an actual sql connection
-    time.sleep(1)
-    raise Exception('Could not connect to internet...')
-
-# testing without in_argument variables assigned
-@retry()
-def connect_again() -> None:
-    # pretend that this contains an actual sql connection
-    time.sleep(1)
-    raise Exception('Could not connect to internet...')
-
-
-def main() -> None:
-    print(f'Retries = {str(retry_num)}')
-    print(f'Delay = {str(retry_delay)}')
-    connect()
-    connect_again()
-
-
-if __name__ == '__main__':
-    main()
+# # =======================TEST=======================
+# @retry(retry_num, retry_delay)
+# def connect() -> None:
+#     # pretend that this contains an actual sql connection
+#     time.sleep(1)
+#     raise Exception('Could not connect to internet...')
+#
+# # testing without in_argument variables assigned
+# @retry()
+# def connect_again() -> None:
+#     # pretend that this contains an actual sql connection
+#     time.sleep(1)
+#     raise Exception('Could not connect to internet...')
+#
+#
+# def main() -> None:
+#     print(f'Retries = {str(retry_num)}')
+#     print(f'Delay = {str(retry_delay)}')
+#     connect()
+#     connect_again()
+#
+#
+# if __name__ == '__main__':
+#     main()
