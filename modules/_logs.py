@@ -5,7 +5,7 @@ from pathlib import Path
 
 """
 An attempt to provide a prepared logging module without writing out all the config code.
-Results will be saved in the text file - see settings.json for config values
+Results will be saved in the text file - see settings.json for settings
 """
 
 # =======================CODE=======================
